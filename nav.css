@@ -1,0 +1,103 @@
+/*
+ * Nav
+ * Simple OOCSS module for navigation
+ * http://jxnblk.github.io/nav
+ *
+ * */
+.nav {
+  line-height: 2.5em;
+  overflow: hidden; }
+  .nav a {
+    float: left;
+    line-height: inherit;
+    padding-right: 0.5em;
+    padding-left: 0.5em;
+    white-space: nowrap; }
+
+.table-nav {
+  display: table;
+  line-height: 2.5em; }
+  .table-nav a {
+    display: table-cell;
+    vertical-align: middle;
+    line-height: inherit;
+    padding-right: 0.5em;
+    padding-left: 0.5em;
+    white-space: nowrap; }
+
+.table-nav-justified {
+  table-layout: fixed;
+  width: 100%; }
+  .table-nav-justified a {
+    text-align: center; }
+
+.nav-big {
+  line-height: 3em; }
+
+.nav-small {
+  line-height: 2em; }
+
+.nav-flush {
+  margin-right: -.5em;
+  margin-left: -.5em; }
+
+.nav-stacked a {
+  float: none;
+  display: block; }
+
+.nav-item {
+  box-sizing: border-box;
+  float: left;
+  margin: 0.25em 0.5em;
+  max-height: 2em; }
+
+.nav-dark a {
+  color: white; }
+  .nav-dark a:hover {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.25); }
+
+.nav-light a {
+  color: #333333; }
+  .nav-light a:hover {
+    color: #333333;
+    background-color: rgba(0, 0, 0, 0.125); }
+
+.nav-stacked-borders {
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgba(0, 0, 0, 0.25); }
+  .nav-stacked-borders a {
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-top-color: rgba(0, 0, 0, 0.25); }
+    .nav-stacked-borders a:first-child {
+      border-top: 0; }
+
+.nav-pills a {
+  border-radius: 0.25rem; }
+  .nav-pills a:hover {
+    background-color: rgba(0, 150, 204, 0.125); }
+.nav-pills .active {
+  color: white;
+  background-color: #0096cc; }
+  .nav-pills .active:hover {
+    background-color: #007199; }
+
+.nav-segmented {
+  border: 1px solid #0096cc;
+  border-radius: 0.25rem; }
+  .nav-segmented a {
+    border-right: 1px solid #0096cc; }
+    .nav-segmented a:hover {
+      background-color: rgba(0, 150, 204, 0.125); }
+    .nav-segmented a:first-child {
+      border-radius: 0.25rem 0 0 0.25rem; }
+    .nav-segmented a:last-child {
+      border-right: 0;
+      border-radius: 0 0.25rem 0.25rem 0; }
+  .nav-segmented .active {
+    color: white;
+    background-color: #0096cc; }
+    .nav-segmented .active:hover {
+      background-color: #007199; }

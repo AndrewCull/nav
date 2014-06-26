@@ -1,0 +1,183 @@
+/*
+ * Nav
+ * Simple OOCSS module for navigation
+ * http://jxnblk.github.io/nav
+ *
+ * */
+
+// Variables
+// Adjust these to match your own styles
+
+// Heights 
+// Using ems will inherit font-size
+$nav-base-height: 2.5em !default;
+$nav-big-height: 3em !default;
+$nav-small-height: 2em !default;
+
+$nav-padding: .5em !default;
+
+$radius: .25rem !default;
+
+// Colors
+$link-color: #0096cc !default;
+$dark-gray: #333 !default;
+$darken-1: rgba(#000,.125) !default;
+$darken-2: rgba(#000,.25) !default;
+$darken-3: rgba(#000,.375) !default;
+$darken-4: rgba(#000,.5) !default;
+
+$border-color: $darken-2 !default;
+
+.nav {
+  //display: inline-block;
+  line-height: $nav-base-height;
+  overflow: hidden; // Replace with micro clearfix
+  //box-sizing: border-box;
+  // Nav stack will need to override this
+  a {
+    //display: inline-block;
+    //line-height: $nav-base-height;
+    float: left;
+    line-height: inherit;
+    padding-right: $nav-padding;
+    padding-left: $nav-padding;
+    white-space: nowrap;
+  }
+}
+
+// Display table based variant
+// Needs collapsing behavior
+.table-nav {
+  display: table;
+  line-height: $nav-base-height;
+  a {
+    display: table-cell;
+    vertical-align: middle;
+    line-height: inherit;
+    padding-right: $nav-padding;
+    padding-left: $nav-padding;
+    white-space: nowrap;
+  }
+}
+
+.table-nav-justified {
+  table-layout: fixed;
+  width: 100%;
+  a {
+    text-align: center;
+  }
+}
+
+
+// Sizing
+.nav-big { line-height: $nav-big-height; }
+.nav-small { line-height: $nav-small-height; }
+
+// Flush left and right
+.nav-flush {
+  margin-right: -.5em;
+  margin-left: -.5em;
+}
+
+// Stacked
+.nav-stacked {
+  a {
+    float: none;
+    display: block;
+  }
+}
+
+
+// Nav Bar
+.nav-bar {
+}
+// Other nav-items
+.nav-item {
+  box-sizing: border-box;
+  float: left;
+  margin: .25em $nav-padding;
+  max-height: 2em;
+}
+
+
+// Themes
+
+.nav-dark {
+  a {
+    color: white;
+    &:hover {
+      color: white;
+      background-color: $darken-2;
+    }
+  }
+}
+
+.nav-light {
+  a {
+    color: $dark-gray;
+    &:hover {
+      color: $dark-gray;
+      background-color: $darken-1;
+    }
+  }
+}
+
+.nav-stacked-borders {
+  border-style: solid;
+  border-width: 1px;
+  border-color: $darken-2;
+  a {
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-top-color: $darken-2;
+    &:first-child {
+      border-top: 0;
+    }
+  }
+}
+
+.nav-pills {
+  a {
+    border-radius: $radius;
+    &:hover {
+      background-color: rgba($link-color,.125);
+    }
+  }
+  .active {
+    color: white;
+    background-color: $link-color;
+    &:hover {
+      background-color: darken($link-color,10%);
+    }
+  }
+}
+
+.nav-segmented {
+  //display: inline-block;
+  border: 1px solid $link-color;
+  border-radius: $radius;
+  a {
+    border-right: 1px solid $link-color;
+    &:hover {
+      //background-color: $darken-1;
+      background-color: rgba($link-color,.125);
+    }
+    &:first-child {
+      border-radius: $radius 0 0 $radius;
+    }
+    &:last-child {
+      border-right: 0;
+      border-radius: 0 $radius $radius 0;
+    }
+  }
+  .active {
+    color: white;
+    background-color: $link-color;
+    &:hover {
+      background-color: darken($link-color,10%);
+    }
+  }
+}
+
+.nav-tabs { }
+
