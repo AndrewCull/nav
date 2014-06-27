@@ -9,12 +9,10 @@
 // Adjust these to match your own styles
 
 // Heights 
-// Using ems will inherit font-size
-$nav-base-height: 2.5em !default;
-$nav-big-height: 3em !default;
-$nav-small-height: 2em !default;
-
-$nav-padding: .5em !default;
+$nav-base-height: 2.5rem !default;
+$nav-big-height: 3rem !default;
+$nav-small-height: 2rem !default;
+$nav-padding: .5rem !default;
 
 $radius: .25rem !default;
 
@@ -29,15 +27,11 @@ $darken-4: rgba(#000,.5) !default;
 $border-color: $darken-2 !default;
 
 .nav {
-  //display: inline-block;
   line-height: $nav-base-height;
-  overflow: hidden; // Replace with micro clearfix
-  //box-sizing: border-box;
-  // Nav stack will need to override this
-  a {
-    //display: inline-block;
-    //line-height: $nav-base-height;
-    float: left;
+  // Not sure if this is needed
+  .nav-item,
+  & > a {
+    display: block;
     line-height: inherit;
     padding-right: $nav-padding;
     padding-left: $nav-padding;
@@ -45,55 +39,46 @@ $border-color: $darken-2 !default;
   }
 }
 
-// Display table based variant
-// Needs collapsing behavior
-.table-nav {
-  display: table;
-  line-height: $nav-base-height;
-  //box-sizing: border-box;
-  a {
-    display: table-cell;
-    vertical-align: middle;
-    line-height: inherit;
-    padding-right: $nav-padding;
-    padding-left: $nav-padding;
-    white-space: nowrap;
-  }
-}
+// Is this useful?
+.nav-item-selectable { cursor: pointer; }
 
-.desktop-table-nav {
-  line-height: $nav-base-height;
-  a {
-    line-height: inherit;
-    padding-right: $nav-padding;
-    padding-left: $nav-padding;
-    white-space: nowrap;
-  }
-}
-@media (min-width: 40em) {
-  .desktop-table-nav {
+@media (min-width: 32em) {
+  .nav {
     display: table;
-    a {
+    .nav-item,
+    & > a {
       display: table-cell;
       vertical-align: middle;
     }
   }
 }
 
-.table-nav-justified {
-  table-layout: fixed;
-  width: 100%;
-  a {
-    text-align: center;
+// Extension to maintain inline style at all sizes
+.nav-mobile {
+  display: table;
+  .nav-item,
+  & > a {
+    display: table-cell;
+    vertical-align: middle;
   }
 }
 
+.nav-fixed { table-layout: fixed; }
 
 // Sizing
 .nav-big { line-height: $nav-big-height; }
 .nav-small { line-height: $nav-small-height; }
+.nav-wide {
+  & > a {
+    padding-right: 2 * $nav-padding;
+    padding-left:  2 * $nav-padding;
+  }
+}
 
-// Flush left and right
+//.nav .button { padding: 0 $nav-padding; }
+
+// Flush labels left and right
+// Hover and active states will overflow
 .nav-flush {
   margin-right: -.5em;
   margin-left: -.5em;
@@ -102,40 +87,42 @@ $border-color: $darken-2 !default;
 // Stacked
 .nav-stacked {
   a {
-    float: none;
     display: block;
   }
 }
 
 
 // Nav Bar
+// Refactor this
 .nav-bar {
 }
-// Other nav-items
-.nav-item {
-  box-sizing: border-box;
-  float: left;
-  margin: .5em $nav-padding;
-  max-height: 2em;
-}
-.nav-input {
-  appearance: none;
-  border-style: solid;
-  border-width: 1px;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  max-width: 100%;
-  height: 2em;
-  line-height: 2em;
-  padding: 0 .5em;
-  border-radius: $radius;
-}
-
+/*
+  // Other nav-items
+  .nav-item {
+    box-sizing: border-box;
+    float: left;
+    margin: .5em $nav-padding;
+    max-height: 2em;
+  }
+  .nav-input {
+    appearance: none;
+    border-style: solid;
+    border-width: 1px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    max-width: 100%;
+    height: 2em;
+    line-height: 2em;
+    padding: 0 .5em;
+    border-radius: $radius;
+  }
+*/
 
 // Themes
 
 .nav-dark {
-  a {
+  .nav-item-selectable,
+  & > a {
     color: white;
     &:hover {
       color: white;
@@ -145,7 +132,8 @@ $border-color: $darken-2 !default;
 }
 
 .nav-light {
-  a {
+  .nav-item-selectable,
+  & > a {
     color: $dark-gray;
     &:hover {
       color: $dark-gray;
@@ -169,7 +157,8 @@ $border-color: $darken-2 !default;
 }
 
 .nav-pills {
-  a {
+  .nav-item-selectable,
+  & > a {
     border-radius: $radius;
     &:hover {
       background-color: rgba($link-color,.125);
@@ -187,7 +176,8 @@ $border-color: $darken-2 !default;
 .nav-segmented {
   box-shadow: inset 0 0 0 1px $link-color;
   border-radius: $radius;
-  a {
+  .nav-item-selectable,
+  & > a {
     border-right: 1px solid $link-color;
     &:hover { background-color: rgba($link-color,.125); }
     &:first-child { border-radius: $radius 0 0 $radius; }
@@ -203,7 +193,55 @@ $border-color: $darken-2 !default;
       background-color: darken($link-color,10%);
     }
   }
+  &.nav-stacked {
+    a {
+      border-right: 0;
+      border-bottom: 1px solid $link-color;
+      &:first-child {
+        border-radius: $radius $radius 0 0 ;
+      }
+      &:last-child {
+        border-bottom: 0;
+        border-radius: 0 0 $radius $radius;
+      }
+    }
+  }
 }
 
-.nav-tabs { }
+.nav-segmented-dark {
+  box-shadow: inset 0 0 0 1px $link-color;
+  border-radius: $radius;
+  & > a {
+    color: white;
+    border-right: 1px solid $link-color;
+    &:hover { background-color: rgba($link-color,.25); }
+    &:first-child { border-radius: $radius 0 0 $radius; }
+    &:last-child {
+      border-right: 0;
+      border-radius: 0 $radius $radius 0;
+    }
+  }
+  .active {
+    color: white;
+    background-color: $link-color;
+    &:hover {
+      background-color: darken($link-color,10%);
+    }
+  }
+}
+
+.nav-tabs {
+  & > a {
+    border-radius: $radius $radius 0 0;
+    border-bottom: 1px solid $border-color;
+    &:hover {
+      background-color: $darken-1;
+    }
+  }
+  .active {
+    background-color: white;
+    border: 1px solid $border-color;
+    border-bottom-color: transparent;
+  }
+}
 

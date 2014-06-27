@@ -2,24 +2,30 @@
 Simple OOCSS module for navigation
 
 ## To Do
-- [ ] Test variants
-  - [ ] Inline block
-  - [ ] Float
-  - [ ] Display table
+- [x] Test variants
+  - [x] Inline block
+  - [x] Float
+  - [x] Display table - winner - consider implications of mobile sizes
+  - [ ] Flex box
 - [ ] Test various size links
 
-- [ ] Consider rounded styling and hover states (overflow hidden will disable dropdowns)
-- [ ] Pills
-- [ ] Tabs
-- [ ] Segmented
+- [x] Consider rounded styling and hover states (overflow hidden will disable dropdowns)
+- [x] Pills
+- [-] Tabs
+- [x] Segmented
+- [ ] Bordered - add hover and active states
+  - [ ] Consider how to handle inline vs stacked for segmented and bordered
 
 - [ ] Handle Icons
 
 - [ ] Active states for all nav themes
 
 - [ ] Nav List
-- [ ] Nav Collapse
+- [ ] Nav Collapse - mobile progressive disclosure mechanism
 - [ ] Justified
 
-- [ ] Table nav? - test combining with table object - for justified display
+- [ ] Nav bars
+  - [ ] Buttons
+  - [ ] Inputs
+
 

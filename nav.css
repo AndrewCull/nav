@@ -5,87 +5,79 @@
  *
  * */
 .nav {
-  line-height: 2.5em;
-  overflow: hidden; }
-  .nav a {
-    float: left;
+  line-height: 2.5rem; }
+  .nav .nav-item, .nav > a {
+    display: block;
     line-height: inherit;
-    padding-right: 0.5em;
-    padding-left: 0.5em;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
     white-space: nowrap; }
 
-.table-nav {
-  display: table;
-  line-height: 2.5em; }
-  .table-nav a {
-    display: table-cell;
-    vertical-align: middle;
-    line-height: inherit;
-    padding-right: 0.5em;
-    padding-left: 0.5em;
-    white-space: nowrap; }
+.nav-item-selectable {
+  cursor: pointer; }
 
-.desktop-table-nav {
-  line-height: 2.5em; }
-  .desktop-table-nav a {
-    line-height: inherit;
-    padding-right: 0.5em;
-    padding-left: 0.5em;
-    white-space: nowrap; }
-
-@media (min-width: 40em) {
-  .desktop-table-nav {
+@media (min-width: 32em) {
+  .nav {
     display: table; }
-    .desktop-table-nav a {
+    .nav .nav-item, .nav > a {
       display: table-cell;
       vertical-align: middle; } }
-.table-nav-justified {
-  table-layout: fixed;
-  width: 100%; }
-  .table-nav-justified a {
-    text-align: center; }
+.nav-mobile {
+  display: table; }
+  .nav-mobile .nav-item, .nav-mobile > a {
+    display: table-cell;
+    vertical-align: middle; }
+
+.nav-fixed {
+  table-layout: fixed; }
 
 .nav-big {
-  line-height: 3em; }
+  line-height: 3rem; }
 
 .nav-small {
-  line-height: 2em; }
+  line-height: 2rem; }
+
+.nav-wide > a {
+  padding-right: 1rem;
+  padding-left: 1rem; }
 
 .nav-flush {
   margin-right: -.5em;
   margin-left: -.5em; }
 
 .nav-stacked a {
-  float: none;
   display: block; }
 
-.nav-item {
-  box-sizing: border-box;
-  float: left;
-  margin: 0.5em 0.5em;
-  max-height: 2em; }
-
-.nav-input {
-  appearance: none;
-  border-style: solid;
-  border-width: 1px;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  max-width: 100%;
-  height: 2em;
-  line-height: 2em;
-  padding: 0 .5em;
-  border-radius: 0.25rem; }
-
-.nav-dark a {
+/*
+  // Other nav-items
+  .nav-item {
+    box-sizing: border-box;
+    float: left;
+    margin: .5em $nav-padding;
+    max-height: 2em;
+  }
+  .nav-input {
+    appearance: none;
+    border-style: solid;
+    border-width: 1px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    max-width: 100%;
+    height: 2em;
+    line-height: 2em;
+    padding: 0 .5em;
+    border-radius: $radius;
+  }
+*/
+.nav-dark .nav-item-selectable, .nav-dark > a {
   color: white; }
-  .nav-dark a:hover {
+  .nav-dark .nav-item-selectable:hover, .nav-dark > a:hover {
     color: white;
     background-color: rgba(0, 0, 0, 0.25); }
 
-.nav-light a {
+.nav-light .nav-item-selectable, .nav-light > a {
   color: #333333; }
-  .nav-light a:hover {
+  .nav-light .nav-item-selectable:hover, .nav-light > a:hover {
     color: #333333;
     background-color: rgba(0, 0, 0, 0.125); }
 
@@ -100,9 +92,9 @@
     .nav-stacked-borders a:first-child {
       border-top: 0; }
 
-.nav-pills a {
+.nav-pills .nav-item-selectable, .nav-pills > a {
   border-radius: 0.25rem; }
-  .nav-pills a:hover {
+  .nav-pills .nav-item-selectable:hover, .nav-pills > a:hover {
     background-color: rgba(0, 150, 204, 0.125); }
 .nav-pills .active {
   color: white;
@@ -113,13 +105,13 @@
 .nav-segmented {
   box-shadow: inset 0 0 0 1px #0096cc;
   border-radius: 0.25rem; }
-  .nav-segmented a {
+  .nav-segmented .nav-item-selectable, .nav-segmented > a {
     border-right: 1px solid #0096cc; }
-    .nav-segmented a:hover {
+    .nav-segmented .nav-item-selectable:hover, .nav-segmented > a:hover {
       background-color: rgba(0, 150, 204, 0.125); }
-    .nav-segmented a:first-child {
+    .nav-segmented .nav-item-selectable:first-child, .nav-segmented > a:first-child {
       border-radius: 0.25rem 0 0 0.25rem; }
-    .nav-segmented a:last-child {
+    .nav-segmented .nav-item-selectable:last-child, .nav-segmented > a:last-child {
       border-right: 0;
       border-radius: 0 0.25rem 0.25rem 0; }
   .nav-segmented .active {
@@ -127,3 +119,40 @@
     background-color: #0096cc; }
     .nav-segmented .active:hover {
       background-color: #007199; }
+  .nav-segmented.nav-stacked a {
+    border-right: 0;
+    border-bottom: 1px solid #0096cc; }
+    .nav-segmented.nav-stacked a:first-child {
+      border-radius: 0.25rem 0.25rem 0 0; }
+    .nav-segmented.nav-stacked a:last-child {
+      border-bottom: 0;
+      border-radius: 0 0 0.25rem 0.25rem; }
+
+.nav-segmented-dark {
+  box-shadow: inset 0 0 0 1px #0096cc;
+  border-radius: 0.25rem; }
+  .nav-segmented-dark > a {
+    color: white;
+    border-right: 1px solid #0096cc; }
+    .nav-segmented-dark > a:hover {
+      background-color: rgba(0, 150, 204, 0.25); }
+    .nav-segmented-dark > a:first-child {
+      border-radius: 0.25rem 0 0 0.25rem; }
+    .nav-segmented-dark > a:last-child {
+      border-right: 0;
+      border-radius: 0 0.25rem 0.25rem 0; }
+  .nav-segmented-dark .active {
+    color: white;
+    background-color: #0096cc; }
+    .nav-segmented-dark .active:hover {
+      background-color: #007199; }
+
+.nav-tabs > a {
+  border-radius: 0.25rem 0.25rem 0 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25); }
+  .nav-tabs > a:hover {
+    background-color: rgba(0, 0, 0, 0.125); }
+.nav-tabs .active {
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-bottom-color: transparent; }
