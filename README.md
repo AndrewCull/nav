@@ -11,7 +11,7 @@ Simple OOCSS module for navigation
 
 - [x] Consider rounded styling and hover states (overflow hidden will disable dropdowns)
 - [x] Pills
-- [-] Tabs
+- [ ] Tabs
 - [x] Segmented
 - [ ] Bordered - add hover and active states
   - [ ] Consider how to handle inline vs stacked for segmented and bordered
