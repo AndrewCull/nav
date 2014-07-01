@@ -28,4 +28,14 @@ Simple OOCSS module for navigation
   - [ ] Buttons
   - [ ] Inputs
 
+---
+
+- [ ] Test inline images/icons
+
+Float           | Display Table
+----------------|----------------
+Wrapping        | Vertical alignment
+Predictable     | Table layout fixed
+Column collapse | Manual collapsing
+
 

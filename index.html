@@ -55,298 +55,133 @@
     .hide { display: none; }
   </style>
 </head>
-<body class="measure-wide wrap px-responsive">
+<body class="measure wrap px-responsive">
 
   <header class="py2">
     <h1 class="h1">Nav</h1>
-    <p>A Simple CSS Module and Extensions for Navigation</p>
+    <p>A simple CSS module and extensions for navigation, pills, tabs, breadcrumbs, pagination, menus, and basically any group of links</p>
   </header>
 
   <section id="basic-nav" class="py1">
     <h1>Basic Nav</h1>
+    <p>Stacked by default. Sets line-height, display block, padding, and white-space nowrap</p>
     <nav class="nav bold mb1">
-      <a href="#!">Nav Link</a>
+      <a href="#!">Basic Nav</a>
       <a href="#!">Kittens</a>
       <a href="#!">Categories</a>
       <a href="#!">Search</a>
     </nav>
-    <nav class="nav bold mb1 nav-light bg-light-gray">
+  </section>
+
+  <section id="nav-table" class="py1">
+    <h1>Nav Table</h1>
+    <h2>Default</h2>
+    <nav class="nav nav-table bold mb1">
+      <a href="#!">Nav Table</a>
+      <a href="#!">Kittens</a>
+      <a href="#!">Categories</a>
+      <a href="#!">Search</a>
+    </nav>
+    <nav class="nav nav-table nav-light bold mb1">
       <a href="#!">Nav Light</a>
       <a href="#!">Kittens</a>
       <a href="#!">Categories</a>
       <a href="#!">Search</a>
     </nav>
-    <nav class="nav bold mb1 nav-dark bg-dark-gray">
-      <a href="#!">Nav Dark</a>
+    <nav class="nav nav-table nav-dark bold mb1 bg-blue">
+      <a href="#!">Nav Table</a>
       <a href="#!">Kittens</a>
       <a href="#!">Categories</a>
       <a href="#!">Search</a>
     </nav>
-    <nav class="nav bold mb1 nav-dark bg-mid-gray">
-      <a href="#!">Nav Dark</a>
+    <h2>Mobile Nav Table</h2>
+    <p>Display table at all screen sizes
+    <nav class="nav mobile-nav-table nav-dark bold mb1 bg-blue">
+      <a href="#!">Mobile Nav</a>
+      <a href="#!">Kittens</a>
+      <a href="#!">Categories</a>
+    </nav>
+    <h2>Fixed</h2>
+    <p>With full-width and centered text utilities</p>
+    <nav class="nav nav-table nav-table-fixed center bold full-width mb1 nav-dark bg-blue">
+      <a href="#!">Nav Table Fixed</a>
       <a href="#!">Kittens</a>
       <a href="#!">Categories</a>
       <a href="#!">Search</a>
-    </nav>
-    <nav class="nav bold mb1 nav-dark bg-blue">
-      <a href="#!">Nav Dark</a>
-      <a href="#!">Kittens</a>
-      <a href="#!">Categories</a>
-      <a href="#!">Search</a>
-    </nav>
-    <nav class="nav bold nav-mobile nav-fixed nav-dark bg-blue">
-      <a href="#!">Nav Mobile</a>
-      <a href="#!">Kittens</a>
-      <a href="#!">Categories</a>
     </nav>
   </section>
 
-  <section id="nav-stacked" class="py1">
-    <h1>Stacked</h1>
-    <div class="inline-block bg-mid-gray mr2">
-      <nav class="nav nav-stacked bold nav-light bg-light-gray">
-        <a href="#!">Nav Stacked</a>
-        <a href="#!">Kittens</a>
-        <a href="#!">Categories</a>
-        <a href="#!">Search</a>
-      </nav>
-    </div>
-    <div class="inline-block">
-      <nav class="nav nav-stacked bold nav-stacked-borders nav-light rounded">
-        <a href="#!">Nav Stacked Borders</a>
-        <a href="#!">Kittens</a>
-        <a href="#!">Categories</a>
-        <a href="#!">Search</a>
-      </nav>
-    </div>
-  </section>
-
-  <section id="sizing" class="py1">
-    <h1>Sizing</h1>
-    <nav class="nav nav-big bold mb1 nav-light bg-light-gray">
+  <section id="sizes" class="py2">
+    <h1>Sizes</h1>
+    <h2>Big</h2>
+    <nav class="nav nav-big nav-table bold mb1 nav-dark bg-blue">
       <a href="#!">Nav Big</a>
       <a href="#!">Kittens</a>
       <a href="#!">Categories</a>
       <a href="#!">Search</a>
     </nav>
-    <nav class="nav nav-small bold mb1 nav-light bg-light-gray">
-      <a href="#!">Nav Small</a>
-      <a href="#!">Kittens</a>
-      <a href="#!">Categories</a>
-      <a href="#!">Search</a>
-    </nav>
-    <nav class="nav nav-wide bold mb1 nav-light bg-light-gray">
-      <a href="#!">Nav Wide</a>
+    <h2>Small</h2>
+    <nav class="nav nav-small nav-table bold mb1 nav-dark bg-blue">
+      <a href="#!">Nav Big</a>
       <a href="#!">Kittens</a>
       <a href="#!">Categories</a>
       <a href="#!">Search</a>
     </nav>
   </section>
 
-  <section id="justified" class="py1">
-    <h1>Justified with .nav-fixed</h1>
-    <nav class="center full-width nav nav-fixed nav-light bg-light-gray">
-      <a href="#!">Nav Stacked</a>
+  <section id="container" class="py2">
+    <h1>Container</h1>
+    <p>Sets labels flush with surrounding content and sets overflow-x scroll</p>
+    <nav class="nav nav-table nav-container bold mb1">
+      <a href="#!">Nav Container</a>
       <a href="#!">Kittens</a>
       <a href="#!">Categories</a>
       <a href="#!">Search</a>
     </nav>
-  </section>
-
-  <section id="pills" class="py1">
-    <h1>Pills</h2>
-    <nav class="nav nav-pills mb1">
-      <a href="#!" class="active">Nav Pills</a>
-      <a href="#!">Kittens</a>
-      <a href="#!">Categories</a>
-      <a href="#!">Search</a>
-    </nav>
-    <nav class="nav nav-stacked nav-pills">
-      <a href="#!" class="active">Nav Pills Stacked</a>
-      <a href="#!">Kittens</a>
-      <a href="#!">Categories</a>
-      <a href="#!">Search</a>
-    </nav>
-  </section>
-
-  <section id="segmented" class="py1">
-    <h1>Segmented Control</h1>
-    <nav class="nav nav-segmented mb1">
-      <a href="#!" class="active">Nav Segmented</a>
-      <a href="#!">Kittens</a>
-      <a href="#!">Categories</a>
-      <a href="#!">Search</a>
-    </nav>
-    <nav class="nav nav-segmented nav-big mb1">
-      <a href="#!" class="active">Nav Small Segmented</a>
-      <a href="#!">Kittens</a>
-      <a href="#!">Categories</a>
-      <a href="#!">Search</a>
-    </nav>
-    <nav class="nav nav-segmented nav-small mb1">
-      <a href="#!" class="active">Nav Small Segmented</a>
-      <a href="#!">Kittens</a>
-      <a href="#!">Categories</a>
-      <a href="#!">Search</a>
-    </nav>
-    <nav class="nav nav-stacked nav-segmented mb1">
-      <a href="#!" class="active">Nav Stacked Segmented</a>
-      <a href="#!">Kittens</a>
-      <a href="#!">Categories</a>
-      <a href="#!">Search</a>
-    </nav>
-  </section>
-
-  <section id="tabs" class="py1">
-    <h1>Tabs</h1>
-    <nav class="nav nav-tabs">
-      <a href="#!" class="active">Nav Pills</a>
-      <a href="#!">Kittens</a>
-      <a href="#!">Categories</a>
-      <a href="#!">Search</a>
-    </nav>
-  </section>
-
-  <!--
-  <section id="folding" class="py1">
-    <h1>Folding</h1>
-    <p>Collapses at mobile sizes</p>
-    <nav class="nav nav-light bg-light-gray rounded">
-      <a href="#!" class="active">Nav Folding</a>
-      <a href="#!">Kittens</a>
-      <a href="#!">Categories</a>
-      <a href="#!">Search</a>
-    </nav>
-  </section>
-  -->
-
-  <section id="nav-bar" class="py1">
-    <h1>Nav Bars</h1>
-    <p>Combinations of multiple components</p>
-    <div class="clearfix mb1 bg-dark-gray">
-      <div class="left">
-        <div class="nav nav-big nav-dark bold">
-          <a href="#!" class="f2 active">Nav Bar</a>
-        </div>
-      </div>
-      <div class="right bold">
-        <div id="account-menu" class="dropdown">
-          <div class="nav nav-big nav-dark">
-            <a href="#account-menu">My Account</a>
-          </div>
-          <div class="dropdown-body dropdown-body-right">
-            <div class="nav nav-stacked nav-stacked-borders nav-light bg-white rounded">
-              <a href="#!">My Profile</a>
-              <a href="#!">Edit Account</a>
-              <a href="#!">Sign Out</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="oh mobile-block">
-        <div class="nav nav-mobile nav-big nav-dark bold">
-          <a href="#!">Kittens</a>
-          <a href="#!">Categories</a>
-          <a href="#!">Search</a>
-        </div>
-      </div>
-    </div>
-    <div class="clearfix mb1 border-bottom">
-      <div class="left">
-        <div class="nav nav-big nav-light bold">
-          <a href="#!" class="f2 active">Nav Bar</a>
-        </div>
-      </div>
-      <div class="right bold">
-        <div id="account-menu-2" class="dropdown">
-          <div class="nav nav-big nav-light">
-            <a href="#account-menu-2">My Account</a>
-          </div>
-          <div class="dropdown-body dropdown-body-right">
-            <div class="nav nav-stacked nav-stacked-borders nav-light bg-white rounded">
-              <a href="#!">My Profile</a>
-              <a href="#!">Edit Account</a>
-              <a href="#!">Sign Out</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="oh mobile-block">
-        <div class="nav nav-mobile nav-big nav-light bold">
-          <a href="#!">Kittens</a>
-          <a href="#!">Categories</a>
-          <a href="#!">Search</a>
-        </div>
-      </div>
+    <div class="nav-container">
+      <nav class="nav mobile-nav-table bold mb1">
+        <a href="#!">Nav Container as wrapper</a>
+        <a href="#!">Kittens</a>
+        <a href="#!">Categories</a>
+        <a href="#!">Search</a>
+      </nav>
     </div>
   </section>
 
-  <section id="collapsible" class="py1">
-    <h1>Collapsible</h1>
-    <div class="clearfix">
-    </div>
+  <section id="themes" class="py2">
+    <h1>Themes</h1>
+    <p>Visual treatments for the same basic nav component</p>
+    <h2>Pills</h2>
+    <nav class="nav mobile-nav-table nav-pills bold mb1">
+      <a href="#!" class="active">Pills</a>
+      <a href="#!">Kittens</a>
+      <a href="#!">Categories</a>
+    </nav>
+    <h2>Tabs</h2>
+    <nav class="nav mobile-nav-table nav-tabs bold mb1">
+      <a href="#!" class="active">Tabs</a>
+      <a href="#!">Kittens</a>
+      <a href="#!">Categories</a>
+    </nav>
+    <h2>Segments</h2>
+    <nav class="nav mobile-nav-table nav-segments bold mb1">
+      <a href="#!" class="active">Segments</a>
+      <a href="#!">Kittens</a>
+      <a href="#!">Categories</a>
+    </nav>
+    <h2>Borders</h2>
+    <p>Only for stacked treatment</p>
+    <nav class="nav nav-borders bold mb1 rounded">
+      <a href="#!" class="active">Borders</a>
+      <a href="#!">Kittens</a>
+      <a href="#!">Categories</a>
+      <a href="#!">Search</a>
+    </nav>
   </section>
 
-  <section id="other" class="py1">
-    <form class="mb1">
-      <div class="nav nav-light bg-light-gray">
-        <div class="nav-item">
-          <h2 class="mb0">Checkboxes</h2>
-        </div>
-        <div class="nav-item nav-item-selectable">
-          <label class="block">
-            <input type="checkbox"> Checkbox
-          </label>
-        </div>
-        <label class="nav-item nav-item-selectable">
-          <input type="checkbox"> Checkbox
-        </label>
-        <div class="nav-item nav-item-selectable">
-          <label>
-            <input type="checkbox"> Checkbox
-          </label>
-        </div>
-      </div>
-    </form>
-    <h2>Pagination</h2>
-    <div class="mb1 nav nav-mobile nav-wide nav-segmented">
-      <a href="#!">&laquo; Previous</a>
-      <a href="#!" class="active">1</a>
-      <a href="#!">2</a>
-      <a href="#!">3</a>
-      <a href="#!">4</a>
-      <a href="#!">...</a>
-      <a href="#!">16</a>
-      <a href="#!">Next &raquo;</a>
-    </div>
-    <div class="bold mb1 nav nav-mobile nav-wide nav-light">
-      <a href="#!">&laquo; Previous</a>
-      <a href="#!" class="active">1</a>
-      <a href="#!">2</a>
-      <a href="#!">3</a>
-      <a href="#!">4</a>
-      <a href="#!">...</a>
-      <a href="#!">16</a>
-      <a href="#!">Next &raquo;</a>
-    </div>
-    <div class="bold mb1 nav nav-mobile nav-wide nav-pills">
-      <a href="#!">&laquo; Previous</a>
-      <a href="#!" class="active">1</a>
-      <a href="#!">2</a>
-      <a href="#!">3</a>
-      <a href="#!">4</a>
-      <a href="#!">...</a>
-      <a href="#!">16</a>
-      <a href="#!">Next &raquo;</a>
-    </div>
-    <h2>Breadcrumbs</h2>
-    <div class="bold mb1 nav nav-mobile nav-flush">
-      <a href="#!">Home</a>
-      <div class="nav-item">/</div>
-      <a href="#!">Categories</a>
-      <div class="nav-item">/</div>
-      <div class="nav-item">Calico</div>
-    </div>
+  <section id="radios-checkboxes" class="py2">
+    <h1>Radios and Checkboxes</h1>
+    <p>Coming soon</p>
   </section>
 
   <footer class="py4">
