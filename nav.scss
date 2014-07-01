@@ -71,6 +71,12 @@ $border-color: $darken-2 !default;
 // Use with width 100% to span full width of container
 .nav-table-fixed { table-layout: fixed; }
 
+// Float based nav
+@media (min-width: $nav-breakpoint) {
+  .nav-float {
+  }
+}
+
 // Adjust heights
 // Big and small are in line with button naming conventions
 // .nav-tall .nav-short ??
@@ -81,6 +87,8 @@ $border-color: $darken-2 !default;
 // Container element/extension to make labels align with other elements
 .nav-container {
   overflow-x: scroll;
+}
+.nav-flush {
   margin-right: -$nav-padding;
   margin-left:  -$nav-padding;
 }

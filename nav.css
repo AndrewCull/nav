@@ -41,7 +41,9 @@
   line-height: 2rem; }
 
 .nav-container {
-  overflow-x: scroll;
+  overflow-x: scroll; }
+
+.nav-flush {
   margin-right: -0.75rem;
   margin-left: -0.75rem; }
 
