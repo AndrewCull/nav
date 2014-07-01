@@ -100,8 +100,13 @@
   .nav-segments .active {
     color: white;
     background-color: #0096cc; }
-    .nav-segments .active:hover {
+    .nav-segments .active:hover, .nav-segments .active:focus {
       background-color: #007199; }
+  .nav-segments .disabled {
+    color: rgba(51, 51, 51, 0.5); }
+    .nav-segments .disabled:hover, .nav-segments .disabled:focus {
+      color: rgba(51, 51, 51, 0.5);
+      background-color: transparent; }
 
 .nav-tabs > a {
   border-radius: 0.25rem 0.25rem 0 0;

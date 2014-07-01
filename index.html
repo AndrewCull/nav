@@ -63,9 +63,9 @@
   </header>
 
   <section id="basic-nav" class="py1">
-    <h1>Basic Nav</h1>
+    <h1 class="mb0">Basic Nav</h1>
     <p>Stacked by default. Sets line-height, display block, padding, and white-space nowrap</p>
-    <nav class="nav bold mb1">
+    <nav class="nav bold mb1 nav-dark bg-blue">
       <a href="#!">Basic Nav</a>
       <a href="#!">Kittens</a>
       <a href="#!">Categories</a>
@@ -75,33 +75,22 @@
 
   <section id="nav-table" class="py1">
     <h1>Nav Table</h1>
-    <h2>Default</h2>
-    <nav class="nav nav-table bold mb1">
-      <a href="#!">Nav Table</a>
-      <a href="#!">Kittens</a>
-      <a href="#!">Categories</a>
-      <a href="#!">Search</a>
-    </nav>
-    <nav class="nav nav-table nav-light bold mb1">
-      <a href="#!">Nav Light</a>
-      <a href="#!">Kittens</a>
-      <a href="#!">Categories</a>
-      <a href="#!">Search</a>
-    </nav>
+    <h2 class="mb0">Default</h2>
+    <p>Stacked below breakpoint</p>
     <nav class="nav nav-table nav-dark bold mb1 bg-blue">
       <a href="#!">Nav Table</a>
       <a href="#!">Kittens</a>
       <a href="#!">Categories</a>
       <a href="#!">Search</a>
     </nav>
-    <h2>Mobile Nav Table</h2>
+    <h2 class="mb0">Mobile Nav Table</h2>
     <p>Display table at all screen sizes
     <nav class="nav mobile-nav-table nav-dark bold mb1 bg-blue">
       <a href="#!">Mobile Nav</a>
       <a href="#!">Kittens</a>
       <a href="#!">Categories</a>
     </nav>
-    <h2>Fixed</h2>
+    <h2 class="mb0">Fixed</h2>
     <p>With full-width and centered text utilities</p>
     <nav class="nav nav-table nav-table-fixed center bold full-width mb1 nav-dark bg-blue">
       <a href="#!">Nav Table Fixed</a>
@@ -130,17 +119,11 @@
   </section>
 
   <section id="container" class="py2">
-    <h1>Container</h1>
+    <h1 class="mb0">Container</h1>
     <p>Sets labels flush with surrounding content and sets overflow-x scroll</p>
-    <nav class="nav nav-table nav-container bold mb1">
-      <a href="#!">Nav Container</a>
-      <a href="#!">Kittens</a>
-      <a href="#!">Categories</a>
-      <a href="#!">Search</a>
-    </nav>
     <div class="nav-container">
-      <nav class="nav mobile-nav-table bold mb1">
-        <a href="#!">Nav Container as wrapper</a>
+      <nav class="nav mobile-nav-table bold mb1 nav-dark bg-blue">
+        <a href="#!">Nav Inside Container</a>
         <a href="#!">Kittens</a>
         <a href="#!">Categories</a>
         <a href="#!">Search</a>
@@ -149,7 +132,7 @@
   </section>
 
   <section id="themes" class="py2">
-    <h1>Themes</h1>
+    <h1 class="mb0">Themes</h1>
     <p>Visual treatments for the same basic nav component</p>
     <h2>Pills</h2>
     <nav class="nav mobile-nav-table nav-pills bold mb1">
@@ -169,7 +152,7 @@
       <a href="#!">Kittens</a>
       <a href="#!">Categories</a>
     </nav>
-    <h2>Borders</h2>
+    <h2 class="mb0">Borders</h2>
     <p>Only for stacked treatment</p>
     <nav class="nav nav-borders bold mb1 rounded">
       <a href="#!" class="active">Borders</a>
@@ -177,6 +160,25 @@
       <a href="#!">Categories</a>
       <a href="#!">Search</a>
     </nav>
+    <h2>Pagination Using Segments</h2>
+    <nav class="nav mobile-nav-table nav-segments bold mb1">
+      <a href="#!">&laquo; Previous</a>
+      <a href="#!">1</a>
+      <a href="#!" class="active">2</a>
+      <a href="#!">3</a>
+      <a href="#!" class="disabled">...</a>
+      <a href="#!">Next &raquo;</a>
+    </nav>
+    <h2>Breadcrumbs</h2>
+    <nav class="nav mobile-nav-table mb1 bg-light-gray rounded">
+      <a href="#!">Home</a>
+      <span class="nav-item">/</span>
+      <a href="#!">Categories</a>
+      <span class="nav-item">/</span>
+      <span class="nav-item">Kittens</span>
+    </nav>
+
+
   </section>
 
   <section id="radios-checkboxes" class="py2">

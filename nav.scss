@@ -186,8 +186,17 @@ $border-color: $darken-2 !default;
   .active {
     color: white;
     background-color: $link-color;
-    &:hover {
+    &:hover,
+    &:focus {
       background-color: darken($link-color,10%);
+    }
+  }
+  .disabled {
+    color: rgba($dark-gray,.5);
+    &:hover,
+    &:focus {
+      color: rgba($dark-gray,.5);
+      background-color: transparent;
     }
   }
 }
