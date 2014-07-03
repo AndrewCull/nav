@@ -13,9 +13,10 @@
   .nav .nav-item {
     display: block;
     line-height: inherit;
-    padding-right: 0.75rem;
-    padding-left: 0.75rem;
     white-space: nowrap; }
+  .nav > a {
+    padding-right: 0.75rem;
+    padding-left: 0.75rem; }
 
 .mobile-nav-table {
   display: table; }
@@ -34,13 +35,37 @@
 .nav-table-fixed {
   table-layout: fixed; }
 
+.nav-item-padding {
+  padding-right: 0.75rem;
+  padding-left: 0.75rem; }
+
+.nav-float {
+  line-height: 2.5rem; }
+  .nav-float > a,
+  .nav-float .nav-item {
+    display: block;
+    line-height: inherit;
+    white-space: nowrap; }
+  .nav-float > a {
+    padding-right: 0.75rem;
+    padding-left: 0.75rem; }
+
+@media (min-width: 32em) {
+  .nav-float:before, .nav-float:after {
+    content: '';
+    display: table; }
+  .nav-float:after {
+    clear: both; }
+  .nav-float > a,
+  .nav-float .nav-item {
+    float: left; } }
 .nav-big {
   line-height: 3rem; }
 
 .nav-small {
   line-height: 2rem; }
 
-.nav-container {
+.nav-scroll-x {
   overflow-x: scroll; }
 
 .nav-flush {

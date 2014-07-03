@@ -39,9 +39,11 @@ $border-color: $darken-2 !default;
   .nav-item {
     display: block;
     line-height: inherit;
+    white-space: nowrap;
+  }
+  & > a {
     padding-right: $nav-padding;
     padding-left: $nav-padding;
-    white-space: nowrap;
   }
 }
 
@@ -71,9 +73,34 @@ $border-color: $darken-2 !default;
 // Use with width 100% to span full width of container
 .nav-table-fixed { table-layout: fixed; }
 
+.nav-item-padding {
+  padding-right: $nav-padding;
+  padding-left: $nav-padding;
+}
+
 // Float based nav
+.nav-float {
+  line-height: $nav-base-height;
+  & > a,
+  .nav-item {
+    display: block;
+    line-height: inherit;
+    white-space: nowrap;
+  }
+  & > a {
+    padding-right: $nav-padding;
+    padding-left: $nav-padding;
+  }
+}
 @media (min-width: $nav-breakpoint) {
   .nav-float {
+    &:before,
+    &:after { content: ''; display: table; }
+    &:after { clear: both; }
+    & > a,
+    .nav-item {
+      float: left;
+    }
   }
 }
 
@@ -85,7 +112,7 @@ $border-color: $darken-2 !default;
 
 
 // Container element/extension to make labels align with other elements
-.nav-container {
+.nav-scroll-x {
   overflow-x: scroll;
 }
 .nav-flush {
