@@ -1,0 +1,46 @@
+
+.avenir { font-family: 'Avenir Next', Avenir, Helvetica, Arial, sans-serif; }
+
+.hide { display: none; }
+
+.dropdown {
+  position: relative;
+}
+.dropdown-body {
+  display: none;
+  position: absolute;
+  top: 100%;
+}
+.dropdown-body-right {
+  right: 0;
+}
+/* Temporary hack - this should be controlled with js and class-based */
+.dropdown:target .dropdown-body {
+  display: block;
+}
+
+.mobile-table {
+  display: table;
+  width: 100%;
+}
+.mobile-table-cell {
+  display: table-cell;
+  vertical-align: middle;
+}
+@media (min-width: 40em) {
+  .table {
+    display: table;
+    width: 100%;
+  }
+  .table-cell {
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+
+.button-block {
+  display: block;
+  text-align: center;
+}
+
+.border-bottom { border-bottom: 1px solid #ccc; }
